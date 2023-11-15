@@ -102,6 +102,36 @@ public class set_matrix_zeroes{
 
         return arr;
     }
+    
+    //Optimal Method-1 : Convert matrix to zeros
+    public static int[][] optimal1(int[][]arr){
+        int row = arr.length;
+        int column = arr[0].length;
+
+        //create arrays
+        boolean[]zeroRows = new boolean[row];
+        boolean[]zeroCols = new boolean[column];
+
+        //set 0 values in boolean array as true
+        for(int i = 0 ; i < row; i++){
+            for(int j = 0 ; j < column ; j++){
+                if(arr[i][j] == 0){
+                    zeroRows[i] = true;
+                    zeroCols[j] = true;
+                }
+            }
+        }
+
+        //update values in the matrix in place
+        for(int i = 0 ; i < row ; i++){
+            for( int j = 0 ; j < column ; j++){
+                if(zeroRows[i] || zeroCols[j]){
+                    arr[i][j] = 0;
+                }
+            }
+        }
+        return arr;
+    }
 
     //main method
     public static void main(String[]args){     
