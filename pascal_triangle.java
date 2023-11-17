@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 public class pascal_triangle{
 
     //Factorial - recursive
@@ -88,6 +90,46 @@ public class pascal_triangle{
             System.out.println();
         }
     }
+
+    //PASCAL TRIANGLE WITH A LIST
+    //helper function
+    public static ArrayList<Integer> elements(int n , int r){
+        ArrayList<Integer> list = new ArrayList<>();
+        int res = 1;
+        for(int i = 0 ; i < r ; i ++){
+            res = res * (n-1);
+            res = res/(i+1);
+            
+        }
+        list.add(res);
+        return list;
+    }
+
+    //driver function
+    public List<List<Integer>> generate(int numRows) {
+
+        List<List<Integer>> outerList = new ArrayList<>(); // list of lilst
+
+        for (int i = 0; i < numRows; i++) {
+
+            List<Integer> innerList = new ArrayList<>(); // list of integer
+
+            for (int j = 0; j <= i; j++) {
+                innerList.addAll(elements(i, j)); // add elements to list of integer
+            }
+            outerList.add(innerList); // add list to outer list
+        }
+        return outerList;      
+    }
+
+
+
+
+
+
+
+
+
 
     //Main Method
     public static void main(String[]args){
