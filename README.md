@@ -21,3 +21,30 @@ In the case of Vector, it manages concurrent access among threads in a single pr
 So, Vector deals more with concurrency and thread safety within a program rather than parallelism or distribution across different systems.</p>
 </ul>
 </li>
+<li>3. Next Permutation
+  <ul>
+    Step I : Start from the right side of the array and find the first element that breaks the descending order. This element will be the pivot <br>
+      1. Start from the right: 3, 2, 1 (descending). <br>
+      2. First element from the right that breaks the descending order is 2 (at index 1).
+  </ul>
+  <ul>
+    Step II : Find the Rightmost Successor to the Pivot. From right to left, find the smallest number larger than the pivot. <br>
+      1. 1. Smallest number larger than 2 to the right: 3.
+  </ul>
+  <ul>
+    Step III : Swap the Pivot with its Rightmost Successor. Swap the pivot element with the rightmost successor found in the previous step.<br>
+      1. Swap 2 with 3.<br>
+      Array after swap: [1, 3, 2]
+  </ul>
+  <ul>
+    Step IV : Reverse the Elements After the Pivot. Reverse the order of elements after the pivot (because they were in descending order, they should be in ascending order 
+     now). <br>
+      1. Elements after the pivot (at index 1): [2]. <br>
+      2. Reverse these elements: [2] (no change as it's already in ascending order).
+      Array after reversal: [1, 3, 2]
+  </ul>
+  <ul>
+    Final Result: [1, 3, 2] <br>
+    So, the next lexicographically greater permutation of the array [1, 2, 3] is [1, 3, 2].
+  </ul>
+</li>
