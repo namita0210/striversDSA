@@ -52,13 +52,29 @@ public class nextPermutation {
         return arr;
     }
 
+    //find index - striver main function's side function
+    public static int findIdx(int[]arr){
+        int idx = -1;
+        int n = arr.length;
+        for(int i = n-2 ; i >= 0 ; i--){
+            if(arr[i]<arr[i+1]){
+                idx = arr[i];
+                break;
+            }
+        }
+        return idx;
+    }
+
+    //strivers solution
+    public static int[] striversSolution(int[]arr){
+        
+        return arr;
+    }
+
     //Main Method
     public static void main(String[]args){
-        int[]arr = {1,2,3};
-        display(arr);
-        reverseArray(arr);
-        System.out.println();
-        display(arr);
+        int[]arr = {1,2,3,4,5};
+        System.out.println(findIdx(arr));       
         
     }
 }
