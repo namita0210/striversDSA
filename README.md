@@ -48,3 +48,4 @@ So, Vector deals more with concurrency and thread safety within a program rather
     So, the next lexicographically greater permutation of the array [1, 2, 3] is [1, 3, 2].
   </ul>
 </li>
+<li>LeetCode Question: Given an array like : {2,3,5,6,11} and an int k. You want to find the missing # in the array at kth position.</li>
