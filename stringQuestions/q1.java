@@ -1,6 +1,7 @@
 package stringQuestions;
 public class q1{
 
+    //reverse string
     public static void reverseString(StringBuilder str){
         System.out.print("Reverse of "+str+" is: ");
         for(int i = 0 ; i < str.length(); i++){
@@ -17,6 +18,8 @@ public class q1{
         System.out.print(str);
         System.out.println();
     }
+
+    //main method
     public static void main(String[]args){
         StringBuilder str = new StringBuilder("helloNamita");
         reverseString(str);
